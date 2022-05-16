@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce()
+const summedPrice = cart.reduce((accumulator, current) => accumulator + current.price, 0)
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +55,10 @@ const summedPrice = cart.reduce()
 */
 
 //CODE HERE
-
+calcFinalPrice = (cartTotal, couponValue, tax) => {
+    return (cartTotal * tax) + cartTotal - couponValue
+}
+console.log(calcFinalPrice(26.97, 5, .07))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -79,7 +83,10 @@ const summedPrice = cart.reduce()
 
 /*
     TEXT ANSWER HERE
-
+// Name is a string because it is text
+// Email is a string becasue it is a text value even if it has numbers in it
+// Phone Number is a number because it uses only numbers
+// DOB is a string because it needs slashes to separate the numbers
 */
 
 /*
@@ -88,3 +95,10 @@ const summedPrice = cart.reduce()
 */
 
 //CODE HERE
+const customer = {
+    name: `Luka`,
+    email: `luka123@gmail.com`,
+    phoneNumber: 9999999999,
+    dateOfBirth: `12/30/2001`
+}
+console.log(customer)

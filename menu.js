@@ -70,8 +70,8 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-pizza.price = 12.99
-
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -81,8 +81,8 @@ pizza.price = 12.99
 */
 
 //CODE HERE
-pizza.category = `appetizer`
-console.log([pizza])
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -154,8 +154,8 @@ let foodArr = [
 */
 
 //CODE HERE
-
-
+const filteredFood = foodArr.filter(food => food.tags.includes(`spicy`))
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -190,7 +190,7 @@ let foodArr = [
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type is `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
     
@@ -198,6 +198,17 @@ let foodArr = [
 */
 
 //CODE HERE
+filterByProperty = (property, number, type) => {
+    let filteredArr = foodArr.filter(food => {
+        if (type === `above`) {
+            return food[property] > number
+        } else {
+            return food[property] < number
+        }
+    })
+    return filteredArr
+}
+console.log(filterByProperty(`price`, 5, `above`))
 
 
 /*
@@ -208,3 +219,4 @@ let foodArr = [
 */
 
 //CODE HERE
+console.log(filterByProperty(`popularity`, 5, `above`))

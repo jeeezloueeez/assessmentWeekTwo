@@ -131,9 +131,8 @@ const deals = [
 */
 
 //CODE HERE
-reassign = (element, index, arr) => {
-    objIndex = arr.findIndex((element =))
-}
+deals[0].title = deals[0].title.replace(`15`, `10`)
+console.log(deals)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -148,3 +147,5 @@ reassign = (element, index, arr) => {
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace(`March`, `April`).trim()
+console.log(deals)
